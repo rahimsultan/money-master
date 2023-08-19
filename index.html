@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Money Maseter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="main h-screen px-10">
+      <h1 class="text-4xl text-center my-4 font-medium">Money Master💰</h1>
+      <div
+        class="flex flex-col md:flex-row items-center justify-between gap-10"
+      >
+        <div class="flex-1">
+          <img class="" src="banner-image.png" alt="" />
+        </div>
+        <div class="flex-1">
+          <h3 class="text-2xl font-medium mb-4">Income</h3>
+          <div class="flex items-center gap-3">
+            <label class="inline-block w-20">Income:</label>
+            <input
+              class="bg-slate-200 p-2 rounded ml-2 w-1/2"
+              type="text"
+              id="income"
+            />
+          </div>
+          <h3 class="text-2xl font-medium mb-4">Expenses</h3>
+          <div class="flex items-center gap-3 my-4">
+            <label class="inline-block w-20">Food:</label>
+            <input
+              class="bg-slate-200 p-2 rounded ml-2 w-1/2"
+              type="text"
+              id="food"
+            />
+          </div>
+          <div class="flex items-center gap-3 my-4">
+            <label class="inline-block w-20">Rent:</label>
+            <input
+              class="bg-slate-200 p-2 rounded ml-2 w-1/2"
+              type="text"
+              id="rent"
+            />
+          </div>
+          <div class="flex items-center gap-3 my-4">
+            <label class="inline-block w-20">Clothes:</label>
+            <input
+              class="bg-slate-200 p-2 rounded ml-2 w-1/2"
+              type="text"
+              id="cloth"
+            />
+          </div>
+          <button
+            onclick="calculateExpenses()"
+            class="px-16 py-3 bg-blue-400 rounded text-white"
+          >
+            Calculate
+          </button>
+          <h3 class="text-2xl font-medium mb-4">
+            Total Expenses: <span id="expense">00</span>
+          </h3>
+          <h3 class="text-2xl font-medium mb-4">
+            Balance: <span id="balance">00</span>
+          </h3>
+          <div class="flex items-center gap-3">
+            <div>
+              <label for="">Save:</label>
+              <input
+                type="text"
+                id="save"
+                class="bg-slate-200 p-2 rounded ml-2 max-w-full"
+              />
+            </div>
+            <label for="">%</label>
+            <button
+              onclick="saveBalance()"
+              class="px-16 py-3 bg-blue-400 rounded text-white"
+            >
+              Save
+            </button>
+          </div>
+          <h3 class="text-2xl font-medium mb-4">
+            Saving Amount: <span id="savings">00</span>
+          </h3>
+          <h3 class="text-2xl font-medium mb-4">
+            Remaining Balance: <span id="remain-balance">00</span>
+          </h3>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
